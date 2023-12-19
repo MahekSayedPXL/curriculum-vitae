@@ -1,3 +1,21 @@
+@font-face {
+    font-family: honeypirls;
+    src: url("assets/assets/honeypirls/Honeypirls Regular.otf");
+}
+@font-face {
+    font-family: notes;
+    src: url("assets/assets/cute_notes/Cute Notes.ttf");
+}
+@font-face {
+    font-family: sugar;
+    src: url("assets/assets/give_me_some_sugar/give me some sugar.ttf");
+}
+@font-face {
+    font-family: flower-girl;
+    src: url("assets/assets/flower_girl/FlowerGirl-Regular.ttf");
+}
+
+
 * {
     /*font-family: Verdana, sans-serif;*/
     margin: 0;
@@ -5,10 +23,47 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("assets/assets/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #container {
     max-width: 80rem;
     display: flex;
     margin: 0 auto;
+}
+
+header {
+    background-color: #dd8294;
+    position: sticky;
+    z-index: -1;
+    top: 0;
+    width: 20%;
+    margin-left: 2%;
+    margin-top: 2%;
+    height: 100%;
+    align-items: center;
+}
+
+main .box {
+    padding: 3%;
+    background-color: #f1bfd6;
+    border: 30px solid #dd8294;
+    margin-bottom: 2%;
+}
+
+nav {
+    background-color: #dd8294;
+    position: sticky;
+    z-index: -1;
+    top: 0;
+    margin-top: 2%;
+    right: 5px;
+    width: 14%;
+    height: 100%;
 }
 
 footer {
@@ -18,6 +73,6 @@ footer {
     height: 100%;
     width: 100%;
     padding: 10px;
-    /*background-color: #dd8294;*/
+    background-color: #dd8294;
     /*font-family: notes, sans-serif;*/
 }
