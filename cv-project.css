@@ -29,50 +29,90 @@ body {
     background-size: cover;
     background-attachment: fixed;
 }
-
+body h1 {
+    font-family: sugar, sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
 #container {
-    max-width: 80rem;
+    max-width: 100rem;
     display: flex;
     margin: 0 auto;
 }
-
+#navbaar_none{
+    display: none;
+}
 header {
     background-color: #dd8294;
-    position: sticky;
+    position: fixed;
     z-index: -1;
     top: 0;
-    width: 20%;
-    margin-left: 2%;
-    margin-top: 2%;
-    height: 100%;
+    width: 15%;
     align-items: center;
 }
-
+#student {
+    font-family: notes, sans-serif;
+    font-size: 1.5em;
+    width: fit-content;
+    margin: auto;
+}
+header a img {
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    width: 90%;
+    text-align: center;
+}
+header a img:hover {
+    filter: drop-shadow(30px 10px #FFFFFF);
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+}
 main .box {
     padding: 3%;
     background-color: #f1bfd6;
     border: 30px solid #dd8294;
     margin-bottom: 2%;
 }
-
 nav {
     background-color: #dd8294;
-    position: sticky;
-    z-index: -1;
+    position: fixed;
+    z-index: 1;
     top: 0;
-    margin-top: 2%;
     right: 5px;
-    width: 14%;
-    height: 100%;
+    width: 20%;
 }
-
+nav ul {
+    list-style-type: none;
+}
+header img {
+    width: 100%;
+}
+#vaardigheden table {
+    width: 100%;
+    border-collapse: collapse;
+}
+#vaardigheden table th,td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: left;
+}
+#vaardigheden table th {
+    border: 1px solid #FFFFFF;
+    background-color: plum;
+    color: #FFFFFF;
+    text-align: center;
+}
+#vaardigheden table tr:nth-child(odd) td {
+    background-color: #dd8294;
+}
 footer {
-    /*font-size: 2em;*/
+    font-size: 2em;
     display: flex;
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
     padding: 10px;
     background-color: #dd8294;
-    /*font-family: notes, sans-serif;*/
+    font-family: notes, sans-serif;
 }
