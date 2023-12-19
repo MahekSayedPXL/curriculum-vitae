@@ -1,0 +1,23 @@
+* {
+    /*font-family: Verdana, sans-serif;*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    max-width: 80rem;
+    display: flex;
+    margin: 0 auto;
+}
+
+footer {
+    /*font-size: 2em;*/
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    /*background-color: #dd8294;*/
+    /*font-family: notes, sans-serif;*/
+}
