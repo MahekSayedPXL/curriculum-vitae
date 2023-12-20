@@ -32,13 +32,19 @@ body {
 body h1 {
     font-family: sugar, sans-serif;
     letter-spacing: 2px;
+    padding: 2%;
     text-align: center;
 }
 #container {
     width: 100%;
     margin-top: 2%;
+    padding: 2%;
     display: flex;
     justify-content: space-between;
+}
+#container ul li {
+    /*font-family: honeypirls, sans-serif;*/
+    /*font-weight: lighter;*/
 }
 #navbaar_none{
     display: none;
@@ -77,12 +83,9 @@ main .box {
     border: 30px solid #dd8294;
     margin-bottom: 2%;
 }
-nav {
-    margin-top: 2%;
+nav #navbaar {
     background-color: #dd8294;
     position: fixed;
-    z-index: -1;
-    top: 0;
     right: 150px;
     width: 14%;
     height: fit-content;
@@ -92,6 +95,9 @@ nav ul {
 }
 header img {
     width: 100%;
+}
+#vaardigheden_none{
+    display: none;
 }
 #vaardigheden table {
     width: 100%;
@@ -103,13 +109,12 @@ header img {
     text-align: left;
 }
 #vaardigheden table th {
-    border: 1px solid #FFFFFF;
-    background-color: plum;
-    color: #FFFFFF;
+    background-color: #b46785;
+    color: white;
     text-align: center;
 }
-#vaardigheden table tr:nth-child(odd) td {
-    background-color: #dd8294;
+#vaardigheden table tr:nth-child(even) td {
+    background-color: #d184a5;
 }
 .column {
     display: flex;
@@ -120,6 +125,10 @@ header img {
 }
 .rechts {
     width: 50%;
+}
+#container ul li {
+    font-size: 18px;
+    list-style: none;
 }
 footer {
     font-size: 2em;
@@ -138,33 +147,50 @@ footer {
         display: flex;
         flex-direction: column;
     }
+    #container ul li {
+        text-align: center;
+        font-size: 18px;
+    }
     #navbaar {
         display: none;
     }
-    #navbaar_none {
-        display: flex;
-        justify-content: space-between;
+    .column :nth-child(1) {
         width: 100%;
-        margin-bottom: 100px;
+    }
+    .column :nth-child(2) {
+        width: 100%;
+    }
+    #navbaar_none {
+        display: unset;
+        justify-content: space-between;
         background-color: #dd8294;
+        border: 1px solid #dd8294;
+
     }
     #navbaar_none ul {
         width: 100%;
-        border: 10px solid black;
         display: flex;
-        justify-content: space-evenly;
+        text-align: center;
+    }
+    #navbaar_none li {
+        width: 100%;
         list-style: none;
+        background-color: #dd8294;
     }
     header {
         width: 100%;
         margin: 0;
         position: unset;
     }
-    header a img {
-        border: 10px solid red;
+    #profile_foto {
         margin: auto;
-        height: 70%;
         width: 40%;
+    }
+    #vaardigheden{
+        display: none;
+    }
+    #vaardigheden_none {
+        display: flex;
     }
     main {
         width: 100%;
