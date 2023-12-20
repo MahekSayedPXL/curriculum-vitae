@@ -35,9 +35,10 @@ body h1 {
     text-align: center;
 }
 #container {
-    max-width: 100rem;
+    width: 100%;
+    margin-top: 2%;
     display: flex;
-    margin: 0 auto;
+    justify-content: space-between;
 }
 #navbaar_none{
     display: none;
@@ -45,8 +46,10 @@ body h1 {
 header {
     background-color: #dd8294;
     position: fixed;
-    z-index: -1;
-    top: 0;
+    /*margin-top: 2%;*/
+    margin-left: 2%;
+    /*z-index: -1;*/
+    /*top: 0;*/
     width: 15%;
     align-items: center;
 }
@@ -65,7 +68,7 @@ header a img:hover {
     filter: drop-shadow(30px 10px #FFFFFF);
 }
 main {
-    width: 60%;
+    width: 50%;
     margin: 0 auto;
 }
 main .box {
@@ -75,12 +78,14 @@ main .box {
     margin-bottom: 2%;
 }
 nav {
+    margin-top: 2%;
     background-color: #dd8294;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     top: 0;
-    right: 5px;
-    width: 20%;
+    right: 150px;
+    width: 14%;
+    height: fit-content;
 }
 nav ul {
     list-style-type: none;
@@ -106,6 +111,16 @@ header img {
 #vaardigheden table tr:nth-child(odd) td {
     background-color: #dd8294;
 }
+.column {
+    display: flex;
+    flex-wrap: wrap;
+}
+.links {
+    width: 50%;
+}
+.rechts {
+    width: 50%;
+}
 footer {
     font-size: 2em;
     display: flex;
@@ -115,4 +130,51 @@ footer {
     padding: 10px;
     background-color: #dd8294;
     font-family: notes, sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    #container {
+        background-image: none;
+        display: flex;
+        flex-direction: column;
+    }
+    #navbaar {
+        display: none;
+    }
+    #navbaar_none {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 100px;
+        background-color: #dd8294;
+    }
+    #navbaar_none ul {
+        width: 100%;
+        border: 10px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+    header {
+        width: 100%;
+        margin: 0;
+        position: unset;
+    }
+    header a img {
+        border: 10px solid red;
+        margin: auto;
+        height: 70%;
+        width: 40%;
+    }
+    main {
+        width: 100%;
+    }
+    main .box {
+        border: 5px solid #dd8294;
+        margin: 0 auto;
+    }
+    footer {
+        font-size: 1.5em;
+        height: 100%;
+    }
 }
