@@ -43,8 +43,8 @@ body h1 {
     justify-content: space-between;
 }
 #container ul li {
-    /*font-family: honeypirls, sans-serif;*/
-    /*font-weight: lighter;*/
+    font-size: 18px;
+    list-style: none;
 }
 #navbaar_none{
     display: none;
@@ -52,10 +52,7 @@ body h1 {
 header {
     background-color: #dd8294;
     position: fixed;
-    /*margin-top: 2%;*/
     margin-left: 2%;
-    /*z-index: -1;*/
-    /*top: 0;*/
     width: 15%;
     align-items: center;
 }
@@ -69,9 +66,14 @@ header a img {
     clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     width: 90%;
     text-align: center;
+    overflow: hidden;
 }
-header a img:hover {
-    filter: drop-shadow(30px 10px #FFFFFF);
+#profile_foto:hover {
+    /*border: 5px solid red;*/
+    filter: drop-shadow(0 0 1rem #573543);
+}
+#profile_foto img:active {
+    border: 5px solid black;
 }
 main {
     width: 50%;
@@ -95,6 +97,14 @@ nav ul {
 }
 header img {
     width: 100%;
+}
+#taal li{
+    width: 100%;
+    text-align: center;
+}
+#hobby li{
+    width: 100%;
+    text-align: center;
 }
 #vaardigheden_none{
     display: none;
@@ -126,9 +136,8 @@ header img {
 .rechts {
     width: 50%;
 }
-#container ul li {
-    font-size: 18px;
-    list-style: none;
+#form form *{
+    width: 100%;
 }
 footer {
     font-size: 2em;
