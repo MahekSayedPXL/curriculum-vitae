@@ -72,8 +72,13 @@ header a img {
     /*border: 5px solid red;*/
     filter: drop-shadow(0 0 1rem #573543);
 }
+#profile_foto:active {
+    filter: none;
+}
 #profile_foto img:active {
-    border: 5px solid black;
+    filter: none;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    border: 3px dashed black;
 }
 main {
     width: 50%;
@@ -85,15 +90,9 @@ main .box {
     border: 30px solid #dd8294;
     margin-bottom: 2%;
 }
-nav #navbaar {
-    background-color: #dd8294;
-    position: fixed;
-    right: 150px;
-    width: 14%;
-    height: fit-content;
-}
-nav ul {
-    list-style-type: none;
+main #persoonlijke_info span {
+    border: 5px solid red;
+    color: #b46785;
 }
 header img {
     width: 100%;
@@ -123,7 +122,7 @@ header img {
     color: white;
     text-align: center;
 }
-#vaardigheden table tr:nth-child(even) td {
+#vaardigheden table tr:nth-child(odd) td {
     background-color: #d184a5;
 }
 .column {
@@ -138,6 +137,40 @@ header img {
 }
 #form form *{
     width: 100%;
+    margin: 2%;
+}
+nav #navbaar {
+    position: fixed;
+    flex-direction: row;
+    right: 150px;
+    width: 16%;
+    height: fit-content;
+}
+nav ul {
+    list-style-type: none;
+}
+.icon-link {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    color: #b46785;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #dd8294;
+    padding: 2%;
+}
+.text {
+    display: none;
+    text-decoration: none;
+}
+.icon_link:hover .text {
+    display: inline;
+    background-color: white;
+    transition: 5ms;
+    text-decoration: none;
 }
 footer {
     font-size: 2em;
@@ -158,7 +191,7 @@ footer {
     }
     #container ul li {
         text-align: center;
-        font-size: 18px;
+        font-size: 20px;
     }
     #navbaar {
         display: none;
@@ -186,6 +219,9 @@ footer {
         list-style: none;
         background-color: #dd8294;
     }
+    #navbaar_none .icon {
+        background-color: #f1bfd6;
+    }
     header {
         width: 100%;
         margin: 0;
@@ -208,8 +244,12 @@ footer {
         border: 5px solid #dd8294;
         margin: 0 auto;
     }
+    #form form *{
+        padding: 1%;
+        font-size: 25px;
+    }
     footer {
-        font-size: 1.5em;
+        font-family: honeypirls, sans-serif;
         height: 100%;
     }
 }
