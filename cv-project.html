@@ -15,53 +15,64 @@
                 <li>
                     <a href="#over_mij" class="icon_link">
                         <img src="assets/assets/user.png" alt="Over mij" class="icon">
-                        <span class="text">Over mij</span>
+                        <div class="text_center">
+                            <span class="text">Over mij</span>
+                        </div>
                     </a>
                 </li>
                 <li>
-                    <a href="#vaardigheden" class="icon_link">
+                    <a href="#vaardigheden_none" class="icon_link">
                         <img src="assets/assets/wallet.png" alt="Vaardigheden" class="icon">
-                        <span class="text">Vaardigheden</span>
+                        <div class="text_center">
+                            <span class="text">Vaardigheden</span>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a href="#ervaring" class="icon_link">
                         <img src="assets/assets/briefcase.png" alt="Ervaring" class="icon">
-                        <span class="text">Ervaring</span>
+                        <div class="text_center">
+                            <span class="text">Ervaring</span>
+                        </div>
                     </a>
                 </li>
                 <li>
                     <a href="#educatie" class="icon_link">
                         <img src="assets/assets/graduation-cap.png" alt="Educatie" class="icon">
-                        <span class="text">Educatie</span>
+                        <div class="text_center">
+                            <span class="text">Educatie</span>
+                        </div>
                     </a>
                 </li>
-                <li><a href="#form" class="icon_link">
-                    <img src="assets/assets/envelope.png" alt="Contact" class="icon">
-                    <span class="text">Contact</span>
-                </a>
+                <li>
+                    <a href="#form" class="icon_link">
+                        <img src="assets/assets/envelope.png" alt="Contact" class="icon">
+                        <div class="text_center">
+                            <span class="text">Contact</span>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
     </nav>
     <header>
         <div id="profile_foto">
-            <a href="www.linkedin.com/in/mahek-sayed-9b140b296">
+            <a href="https://www.linkedin.com/in/mahek-sayed-9b140b296">
                 <img src="assets/assets/profilepic.jpg" alt="foto"/>
             </a>
         </div>
-        <h1>Mahek Sayed</h1>
+        <h1 id="animatie_naam">Mahek Sayed</h1>
         <p id="student">Student</p>
     </header>
     <main>
         <div class="box" id="over_mij">
-            <h1>Over Mij</h1>
+            <h1 class="animatie">Over Mij</h1>
             <h3>Hallo, ik ben Mahek Sayed</h3>
             <p>Ik ben een gepassioneerd programmeerstudent met een rijbewijs B, mijn leergierigheid en enthousiame maken
                 me gemotiveerd om nieuwe uitdagingen te proberen.</p>
         </div>
         <div class="box" id="persoonlijke_info">
-            <h1>Persoonlijke info</h1>
+            <h1 class="animatie">Persoonlijke info</h1>
             <ul>
                 <li>Naam <span>Mahek Sayed</span></li>
                 <li>D.O.B <span>11 feb 2003</span></li>
@@ -70,66 +81,107 @@
                 <li>Adress <span>Pater Cuypersstraat 20/201 <br> Nieuwerkerken 3850 <br> Limburg, Belgium</span></li>
             </ul>
         </div>
+        <input type="radio" name="slides" id="slide1" checked>
+        <input type="radio" name="slides" id="slide2">
         <div class="box" id="info">
-            <div class="column">
-                <div id="taal" class="links">
-                    <h1>Taal</h1>
-                    <ul>
-                        <li>Nederlands</li>
-                        <li>Engels</li>
-                        <li>Hindi</li>
-                        <li>Urdu</li>
-                    </ul>
-                </div>
-                <div id="hobby" class="rechts">
-                    <h1>Hobby</h1>
-                    <ul>
-                        <li>Fitness</li>
-                        <li>Reizen</li>
-                        <li>Lezen</li>
-                    </ul>
-                </div>
-            </div>
-            <div id="vaardigheden">
-                <table>
+            <div id="table1" class="table">
+                <table id="vaardigheden">
+                    <thead>
                     <tr>
                         <th colspan="4"><h1>Vaardigheden</h1></th>
                     </tr>
                     <tr>
-                        <th colspan="2">Sociale Vaardigheden</th>
+                        <th colspan="1">Sociale Vaardigheden</th>
                         <th colspan="2">Technische Vaardigheden</th>
                     </tr>
+                    </thead>
+                    <tbody>
                     <tr>
                         <td>Team player</td>
-                        <td></td>
                         <td>HTML/CSS</td>
                         <td>Goed</td>
                     </tr>
                     <tr>
                         <td>Ordelijk</td>
-                        <td></td>
                         <td>SQL</td>
                         <td>Goed</td>
                     </tr>
                     <tr>
                         <td>Zelfstandig</td>
-                        <td></td>
                         <td>C#</td>
                         <td>Basis</td>
                     </tr>
                     <tr>
                         <td>Respectvol</td>
-                        <td></td>
                         <td>MS office</td>
                         <td>Zeer goed</td>
                     </tr>
+                    </tbody>
                 </table>
+            </div>
+            <div id="table2" class="table">
+                <table>
+                    <thead>
+                    <tr>
+                        <th colspan="2">Taal</th>
+                        <th colspan="1">Hobby</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Nederlands</td>
+                        <td>Goed</td>
+                        <td>Fitness</td>
+                    </tr>
+                    <tr>
+                        <td>Engels</td>
+                        <td>Zeer goed</td>
+                        <td>Lezen</td>
+                    </tr>
+                    <tr>
+                        <td>Hindi</td>
+                        <td>Moedertaal</td>
+                        <td>Reizen</td>
+                    </tr>
+                    <tr>
+                        <td>Urdu</td>
+                        <td>Zeer goed</td>
+                        <td>Badminton</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="table_labels">
+            <label class="table_label table_label1" for="slide1"></label>
+            <label class="table_label table_label2" for="slide2"></label>
+        </div>
+        <div id="taalHobby_none" class="box">
+            <div class="column">
+                <h1>Taal</h1>
+                <div class="links">
+                    <ul>
+                        <li>Nederlands <span>Goed</span></li>
+                        <li>Engels <span>Zeer goed</span></li>
+                        <li>Hindi <span>Moedertaal</span></li>
+                        <li>Urdu <span>Zeer goed</span></li>
+                    </ul>
+                </div>
+                <h1>Hobby</h1>
+                <div class="rechts">
+                    <ul>
+                        <li>Fitness</li>
+                        <li>Lezen</li>
+                        <li>Reizen</li>
+                        <li>Badminton</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div id="vaardigheden_none" class="box">
             <div class="column">
+                <h1>Sociale Vaardigheden</h1>
                 <div class="links">
-                    <h1>Sociale Vaardigheden</h1>
                     <ul>
                         <li>Team player</li>
                         <li>Enthousiast</li>
@@ -137,28 +189,26 @@
                         <li>Ordelijk</li>
                     </ul>
                 </div>
-                <div class="rechts">
                     <h1>Technische Vaardigheden</h1>
-                    <ul>
-                        <li>MS Office <span>Zeer goed</span></li>
-                        <li>HTML/CSS <span>Goed</span></li>
-                        <li>SQL <span>Goed</span></li>
-                        <li>C# <span>Basis</span></li>
-                    </ul>
-                </div>
+                    <div class="rechts">
+                        <ul>
+                            <li>MS Office <span>Zeer goed</span></li>
+                            <li>HTML/CSS <span>Goed</span></li>
+                            <li>SQL <span>Goed</span></li>
+                            <li>C# <span>Basis</span></li>
+                        </ul>
+                    </div>
             </div>
         </div>
         <div class="box" id="ervaring">
-            <h1>Ervaring</h1>
+            <h1 class="animatie">Ervaring</h1>
             <div class="column">
                 <div  class="links">
                     <ul>
                         <li>
-                            <span>
-                                <h2><i class="fa-solid fa-map-pin" ></i> Horeca</h2>
-                                <p>Lees Smakelijk, Nieuwerkerken <br> Jun 2021 - tot heden</p>
-                                <p>In de keuken helpen, broodjes maken, klanten bedienen en kassa.</p>
-                            </span>
+                            <h2><i class="fa-solid fa-map-pin" ></i> Horeca</h2>
+                            <p>Lees Smakelijk, Nieuwerkerken <br> Jun 2021 - tot heden</p>
+                            <p>In de keuken helpen, broodjes maken, klanten bedienen en kassa.</p>
                         </li>
                         <li>
                             <h2><i class="fa-solid fa-map-pin"></i> HR-student</h2>
@@ -185,7 +235,7 @@
             </div>
         </div>
         <div class="box" id="educatie">
-            <h1>Educatie</h1>
+            <h1 class="animatie">Educatie</h1>
             <div class="column">
                 <div  class="links">
                     <ul>
@@ -194,7 +244,7 @@
                             <p>Hogeschool PXL <br> 2023 - Tot heden <br> Elfde-Liniestraat 24 <br> Hasselt 3500</p>
                         </li>
                         <li>
-                            <h2><i class="fa-solid fa-graduation-cap"></i> Toegepaste Informatica</h2>
+                            <h2><i class="fa-solid fa-graduation-cap"></i> Bachelor in Toegepaste Informatica</h2>
                             <p>Hogeschool PXL <br> 2022 - 2023 <br> Elfde-Liniestraat 24 <br> Hasselt 3500</p>
                         </li>
                     </ul>
@@ -205,13 +255,17 @@
                             <h2><i class="fa-solid fa-graduation-cap"></i> Programmeren</h2>
                             <p>Qrios <br> 2021 - 2022 <br> Blijde-Inkomststraat 36 <br> Hasselt 3500</p>
                         </li>
+                        <li>
+                            <h2><i class="fa-solid fa-graduation-cap"></i> Kantoor</h2>
+                            <p>Hasp-O Centrum <br> 2019 - 2021 <br>  Diesterstraat 1 <br>  Sint-Truiden 3800</p>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div id="form" class="box">
-            <h1>Neem contact met mij op</h1>
-            <form method="post" action="mailto:maheksayed1920@gmail.com" enctype="text/plain" target="_blank" novalidate accept-charset="utf-8" autocomplete="on">
+            <h1 class="animatie">Neem contact met mij op</h1>
+            <form method="post" action="mailto:maheksayed1920@gmail.com" enctype="text/plain" target="_blank" novalidate accept-charset="utf-8" >
                 <label for="naam">Naam</label>
                 <input type="text" name="Naam" id="naam"/>
                 <label for="mailadres">E-mail</label>
@@ -220,6 +274,7 @@
                 <textarea id="boodschap" wrap="hard" name="Boodschap">
                 </textarea>
                 <input type="submit" value="Verzenden"/>
+                <input type="reset" value="Wissen"/>
             </form>
         </div>
     </main>

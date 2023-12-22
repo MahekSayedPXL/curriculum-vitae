@@ -68,8 +68,93 @@ header a img {
     text-align: center;
     overflow: hidden;
 }
+
+#info {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
+}
+.table {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    padding: 2%;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#slide1:checked ~ #info #table1 {
+    transform: translateX(0%);
+}
+
+#slide2:checked ~ #info #table2 {
+    transform: translateX(-100%);
+}
+#slide1:checked ~ #info #table2,
+#slide2:checked ~ #info #table1 {
+    opacity: 0;
+    pointer-events: none;
+}
+input[name="slides"] {
+    display: none;
+}
+.table_labels {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.table_label {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 6px;
+    cursor: pointer;
+}
+#slide1:checked ~ .table_labels .table_label1,
+#slide2:checked ~ .table_labels .table_label2 {
+    background-color: #333;
+}
+
+#animatie_naam {
+    animation: scaleUp 1s ease-in-out infinite alternate;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+.box:hover {
+    animation: scaleUp 1s ease-in-out infinite alternate;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.02);
+    }
+}
+.box:hover h1 {
+    animation: colorChange 2s linear infinite;
+}
+@keyframes colorChange {
+    0% {
+        color: #007BFF;
+    }
+    50% {
+        color: #FF4500;
+    }
+    100% {
+        color: #007BFF;
+    }
+}
+
 #profile_foto:hover {
-    /*border: 5px solid red;*/
     filter: drop-shadow(0 0 1rem #573543);
 }
 #profile_foto:active {
@@ -77,7 +162,6 @@ header a img {
 }
 #profile_foto img:active {
     filter: none;
-    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     border: 3px dashed black;
 }
 main {
@@ -90,8 +174,10 @@ main .box {
     border: 30px solid #dd8294;
     margin-bottom: 2%;
 }
+main #persoonlijke_info {
+    text-align: center;
+}
 main #persoonlijke_info span {
-    border: 5px solid red;
     color: #b46785;
 }
 header img {
@@ -105,24 +191,27 @@ header img {
     width: 100%;
     text-align: center;
 }
-#vaardigheden_none{
+#taalHobby_none {
     display: none;
 }
-#vaardigheden table {
+#vaardigheden_none {
+    display: none;
+}
+table {
     width: 100%;
     border-collapse: collapse;
 }
-#vaardigheden table th,td {
+table thead th,tbody tr td{
     border: 1px solid black;
     padding: 10px;
     text-align: left;
 }
-#vaardigheden table th {
+table thead th{
     background-color: #b46785;
     color: white;
     text-align: center;
 }
-#vaardigheden table tr:nth-child(odd) td {
+table tr:nth-child(odd) td {
     background-color: #d184a5;
 }
 .column {
@@ -142,7 +231,7 @@ header img {
 nav #navbaar {
     position: fixed;
     flex-direction: row;
-    right: 150px;
+    right: 80px;
     width: 16%;
     height: fit-content;
 }
@@ -162,15 +251,20 @@ nav ul {
     background-color: #dd8294;
     padding: 2%;
 }
+#navbaar a {
+    text-decoration: none;
+}
 .text {
     display: none;
-    text-decoration: none;
 }
 .icon_link:hover .text {
     display: inline;
     background-color: white;
-    transition: 5ms;
+    transition: 1s;
     text-decoration: none;
+}
+#navbaar a:active .icon{
+    background-color: #f1bfd6;
 }
 footer {
     font-size: 2em;
@@ -196,12 +290,6 @@ footer {
     #navbaar {
         display: none;
     }
-    .column :nth-child(1) {
-        width: 100%;
-    }
-    .column :nth-child(2) {
-        width: 100%;
-    }
     #navbaar_none {
         display: unset;
         justify-content: space-between;
@@ -219,8 +307,13 @@ footer {
         list-style: none;
         background-color: #dd8294;
     }
-    #navbaar_none .icon {
+    #navbaar_none .text {
+        display: inline;
         background-color: #f1bfd6;
+    }
+    #navbaar_none a {
+        text-decoration: none;
+        color: black;
     }
     header {
         width: 100%;
@@ -231,10 +324,31 @@ footer {
         margin: auto;
         width: 40%;
     }
-    #vaardigheden{
+    main .column {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-content: center;
+    }
+    main .column span {
+        color: #b46785;
+    }
+    main.column h1 {
+        font-size: 20px;
+    }
+    #info {
+        display: none;
+    }
+    input[name="slides"] {
+        display: none;
+    }
+    .table_labels {
         display: none;
     }
     #vaardigheden_none {
+        display: flex;
+    }
+    #taalHobby_none {
         display: flex;
     }
     main {
